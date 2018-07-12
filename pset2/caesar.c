@@ -1,5 +1,5 @@
 // Shifts an 'n' number (user defined before runtime) of letters of user inputed text (at runtime).
-// usage: ./caesar n
+// usage: ./caesar n (n being a non-negative integer).
 // João Marujo
 // pset2 - caesar
 // July 2018
