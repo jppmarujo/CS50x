@@ -7,8 +7,7 @@
 3. prompt the user for a string (plaintext: )
 
 4. encrypt the text with cypher k
-
-4.1 k (A or a must 0; B or b must 1; C or c must 2; ... until Z or z is 25);
+    4.1 k (A or a must 0; B or b must 1; C or c must 2; ... until Z or z is 25);
 
 5. print the result with (ciphertext: )
 6. end with a newline
