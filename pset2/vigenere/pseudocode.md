@@ -1,4 +1,4 @@
-#Possible solution in pseudocode
+# Possible solution in pseudocode
 
 1. accept a single-line keyword before runtime
 2. keyword must be alphabetical characters only
