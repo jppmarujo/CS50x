@@ -56,7 +56,7 @@ int main(int argc, string argv[])
                     }
                 }
 
-                else if (text[a] == '\0')
+                else if (text[a] == b)
                 {
                     break;
                 }
