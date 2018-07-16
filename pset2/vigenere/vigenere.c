@@ -33,8 +33,10 @@ int main(int argc, string argv[])
 
     for (int a = 0, b = strlen(text), c = 0; a < b; a++)
     {
+                // checks if the char[n] in string 'text' is alphabetical.
                 if (isalpha(text[a]))
                 {
+                    // checks if the char[n] in string 'text' is lower case.
                     if (islower(text[a]))
                     {
                         text[a] = text[a] - 97;
@@ -45,6 +47,7 @@ int main(int argc, string argv[])
                         c++;
                     }
 
+                    // checks if the char[n] in string 'text' is upper case.
                     else if (isupper(text[a]))
                     {
                         text[a] = text[a] - 65;
@@ -56,18 +59,21 @@ int main(int argc, string argv[])
                     }
                 }
 
+                // breaks out of the loop in order not to print the '\0' tag that represents the end of a string in an array.
                 else if (text[a] == b)
                 {
                     break;
                 }
 
+                // in order not to encypher spaces.
                 else
                 {
                     key[c] = key[c];
                     printf("%c", text[a]);
                 }
     }
-    //print a new line before main ends.
+
+    // prints a new line before main ends.
     printf("\n");
     return 0;
 }
