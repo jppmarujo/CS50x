@@ -25,9 +25,10 @@
 int main(int argc, string argv[])
 {
     // checks if there are only 2 arguments in the command line, and if the argument is non-negative.
-    if ( argc != 2 || atoi(argv[1]) < 0)
+    if (argc != 2 || atoi(argv[1]) < 0)
     {
-        printf( BOLDRED "You must type one positive integer, and no more than one, otherwise you're to blame for segmentation fault!\n" BOLDGREEN "Usage is: ./caesar n\n" RESET );
+        printf(BOLDRED "You must type one positive integer, and no more than one, otherwise you're to blame for segmentation fault!\n"
+               BOLDGREEN "Usage is: ./caesar n\n" RESET);
         return 1;
     }
 
@@ -41,33 +42,37 @@ int main(int argc, string argv[])
 
     // int that starts at 0; another int that equals the lenght of plaintext; while i is less than the plaintext lenght; add another to i.
     for (int i = 0, n = strlen(ptext); i < n; i++)
+    {
+        // check if it is a letter.
+        if (isalpha(ptext[i]))
         {
-            // check if it is a letter.
-            if (isalpha(ptext[i]))
+            // check if it is lowercase.
+            if (islower(ptext[i]))
             {
-                // check if it is lowercase.
-                if (islower(ptext[i]))
-                {
                 ptext[i] = ptext[i] - 97;
                 ptext[i] = (ptext[i] + k) % 26;
                 ptext[i] = ptext[i] + 97;
                 printf("%c", ptext[i]);
-                }
-                // check if it is uppercase.
-                else if (isupper(ptext[i]))
-                {
+            }
+
+            // check if it is uppercase.
+            else if (isupper(ptext[i]))
+            {
                 ptext[i] = ptext[i] - 65;
                 ptext[i] = (ptext[i] + k) % 26;
                 ptext[i] = ptext[i] + 65;
                 printf("%c", ptext[i]);
-                }
-            }
-            // if it is not a letter, just print as is.
-            else
-            {
-            printf("%c", ptext[i]);
             }
         }
+
+        // if it is not a letter, just print as is.
+        else
+        {
+            printf("%c", ptext[i]);
+        }
+    }
+
+    // prints a new line, and returns 0 after main is executed.
     printf("\n");
     return 0;
 }
