@@ -1,6 +1,13 @@
 # Search and sorting algorithms class
 In week 2, David J. Malan starts talking about algorithms in a more profound manner. I'll try to summarize each one to shine some light on their differences. 
 
+## Computational Complexity
+When we talk about the complexity of an algorithm, we generally refer to the **worst-case scenario**.
+We refer to this as O.
+
+We sometimes also care about the **best-case scenario**.
+We refer to this as Û.
+
 ## Searching 
 
 ### Linear search
