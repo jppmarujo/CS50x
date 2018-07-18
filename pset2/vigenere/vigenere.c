@@ -1,3 +1,10 @@
+// Enciphers text with a key given by the user before runtime. Each character of the key corresponds to an alphabetical index value.
+// (A: 0, B: 1, C: 2 ... Z: 25) | v.g: key = abc ; plaintext = abc ; result = a(a is a 0 jump) c(b is 1 jump) e(c is 2 jumps).
+// Usage: ./vigenere key
+// João Marujo
+// pset2
+// July 2018
+
 #include <stdio.h>
 #include <cs50.h>
 #include <ctype.h>
