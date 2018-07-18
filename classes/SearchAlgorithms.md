@@ -54,6 +54,7 @@ There are various methods to do it, some more efficient than others.
 ### Selection sort
 
 Find the **smallest** unsorted element in an array and swap it with the **first** unsorted element of that array.
+
 O : O(n²)
 
 Ω : n²
