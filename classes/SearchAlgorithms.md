@@ -15,7 +15,7 @@ for each element in array
 return false
 ```
 
-## Binary search
+### Binary search
 
 Divide the problem each time in half, in order to have less steps before finding the _int_, or complete the algorithm.
 
