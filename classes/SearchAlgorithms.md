@@ -23,6 +23,7 @@ return false
 ```
 
 O : _n_
+
 Ω : 1
 
 ### Binary search
@@ -42,6 +43,7 @@ else
 ```
 
 O : _log n_
+
 Ω : 1
 
 ## Sorting
@@ -53,22 +55,29 @@ There are various methods to do it, some more efficient than others.
 
 Find the **smallest** unsorted element in an array and swap it with the **first** unsorted element of that array.
 O : O(n²)
+
 Ω : n²
 
 ### Bubble sort
 
 Swap **adjacent pairs** of elements if they are out of order, effectively "bubbling" larger elements to the right and smaller ones to the left. 
+
 O : n²
+
 Ω : n
 
 ### Insertion sort
 
 Proceed once through the array from left-to-right, **shifting** elements as necessary to insert each element into its correct place.
+
 O : n²
+
 Ω : n
 
 ### Merge sort
 
 **Split** the full array into subarrays, then **merge** those subarrays back together in the correct order.
+
 O : _n log n_
+
 Ω : _n log n_
