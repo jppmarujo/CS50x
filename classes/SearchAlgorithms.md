@@ -79,6 +79,15 @@ O : n²
 
 **Split** the full array into subarrays, then **merge** those subarrays back together in the correct order.
 
+The idea is to break the array down until the subarrays are size 1, and then rebuild from there.
+So, assuming _n > 1_ (since an array with a single _n_ element is sorted, of course):
+
+* Sort the left half of the array;
+    - In here, there are multiple steps to sort;
+* Sort the right half of the array;
+    - In here, there are multiple steps to sort, also;
+* Merge the two halves together.
+
 O : _n log n_
 
 Ω : _n log n_
