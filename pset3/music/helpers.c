@@ -1,4 +1,7 @@
 // Helper functions for music
+// João Marujo
+// pset2 - caesar
+// July 2018
 
 #include <stdio.h>
 #include <cs50.h>
@@ -7,11 +10,6 @@
 #include <math.h>
 
 #include "helpers.h"
-
-#define A4FREQ 440;
-#define A4PLACE 0;
-#define OCTAVESTEPS 12.0;
-#define A4OCTAVE 4;
 
 // function to return the number of eight notes.
 int duformula(int a, int b);
@@ -58,7 +56,7 @@ int frequency(string note)
         {
             distance = (4 - char2);
             distancein12 = (distance * 12.0);
-            octaveposition = 440.0 / pow (2.0, distancein12 / 12.0);
+            octaveposition = 440.0 / pow(2.0, distancein12 / 12.0);
         }
 
         // if the octave is higher than 4 or lower than 9.
@@ -66,7 +64,7 @@ int frequency(string note)
         {
             distance = (char2 - 4);
             distancein12 = (distance * 12.0);
-            octaveposition = 440.0 * pow (2.0, distancein12 / 12.0);
+            octaveposition = 440.0 * pow(2.0, distancein12 / 12.0);
         }
 
         // if the octave is equal to 4.
@@ -74,7 +72,7 @@ int frequency(string note)
         {
             distance = (4 - char2);
             distancein12 = (distance * 12.0);
-            octaveposition = 440.0 * pow (2.0, distancein12 / 12.0);
+            octaveposition = 440.0 * pow(2.0, distancein12 / 12.0);
         }
 
         // if the octave is lower than 1 or bigger than 8.
@@ -88,44 +86,43 @@ int frequency(string note)
         switch (note[0])
         {
             case 'A' :
-                freq = octaveposition * pow (2.0, 0 / 12.0);
+                freq = octaveposition * pow(2.0, 0 / 12.0);
                 break;
 
             case 'B' :
                 offset = 2;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'C' :
                 offset = -9;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'D' :
                 offset = -7;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'E' :
                 offset = -5;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'F' :
                 offset = -4;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'G' :
                 offset = -2;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             default :
-
-            printf("Something isn't right with your note. Remember it goes like one of these: C, D, E, F, G, A, B.\n");
-            return 1;
-            break;
+                printf("Something isn't right with your note. Remember it goes like one of these: C, D, E, F, G, A, B.\n");
+                return 1;
+                break;
         }
 
         return round(freq);
@@ -139,7 +136,7 @@ int frequency(string note)
         {
             distance = (4 - char2);
             distancein12 = (distance * 12.0);
-            octaveposition = 440.0 / pow (2.0, distancein12 / 12.0);
+            octaveposition = 440.0 / pow(2.0, distancein12 / 12.0);
         }
 
         // if the octave is higher than 4 or lower than 9.
@@ -147,7 +144,7 @@ int frequency(string note)
         {
             distance = (char2 - 4);
             distancein12 = (distance * 12.0);
-            octaveposition = 440.0 * pow (2.0, distancein12 / 12.0);
+            octaveposition = 440.0 * pow(2.0, distancein12 / 12.0);
         }
 
         // if the octave is equal to 4.
@@ -155,7 +152,7 @@ int frequency(string note)
         {
             distance = (4 - char2);
             distancein12 = (distance * 12.0);
-            octaveposition = 440 * pow (2.0, distancein12 / 12.0);
+            octaveposition = 440 * pow(2.0, distancein12 / 12.0);
         }
 
         // if the octave is lower than 1 or bigger than 8.
@@ -169,37 +166,37 @@ int frequency(string note)
         switch (note[0])
         {
             case 'A' :
-                freq = octaveposition * pow (2.0, 0 / 12.0);
+                freq = octaveposition * pow(2.0, 0 / 12.0);
                 break;
 
             case 'B' :
                 offset = 2;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'C' :
                 offset = -9;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'D' :
                 offset = -7;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'E' :
                 offset = -5;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'F' :
                 offset = -4;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             case 'G' :
                 offset = -2;
-                freq = octaveposition * pow (2.0, offset / 12.0);
+                freq = octaveposition * pow(2.0, offset / 12.0);
                 break;
 
             default :
@@ -218,7 +215,7 @@ int frequency(string note)
             freq = freq * pow(2.0, 1.0 / 12.0);
         }
 
-    return round(freq);
+        return round(freq);
 
     }
 
@@ -229,10 +226,14 @@ int frequency(string note)
 bool is_rest(string s)
 {
     if (strcmp(s, "") == 0)
+    {
         return true;
+    }
 
     else
+    {
         return false;
+    }
 }
 
 
