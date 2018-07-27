@@ -17,19 +17,25 @@ int duformula(int a, int b);
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
 {
-
+    // an array of ints to hold 'X', '/' and 'Y'
     int n[3];
+    // an integer to hold the numerator, or X;
     int numerator;
+    // an integer to hold the denominator, or Y.
     int denominator;
 
+    // for loop used to extract each char from the string fraction;
     for (int i = 0, size = strlen(fraction); i < size; i++)
     {
         n[i] = atoi(&fraction[i]);
     }
 
+    // assigns the integer numerator (or 'X') to the value of n[0];
     numerator = n[0];
+    // assigns the integer denominator (or 'Y') to the value of n[2];
     denominator = n[2];
 
+    // calculus using the custom function (see last lines of code).
     return duformula(numerator, denominator);
 }
 
@@ -37,15 +43,20 @@ int duration(string fraction)
 int frequency(string note)
 {
     // assign the octave to the int char2, remembering that if it is A#3, than note is [0][1][2]. So strlen is going to be 3.
-    // like so, char2 has to be strlen - 1, or 3 - 1 in that case, in order to assign it to note[2].
+    // like so, char2 has to be strlen - 1, or 3 - 1 in that case, in order to assign it to note[2], which means A(note[0]), #(note[1]) and 3(note[2]).
     int char2 = note[strlen(note) - 1];
     // if note is a string, the octave (char2) is a char. So, in ASCII, '0' = 48; '1' = 49;
     char2 -= 48;
 
+    // stores the distance from the forth octave to the one the user inputs.
     int distance;
+    // stores the distance in 12 steps, in order to set up the octave.
     int distancein12;
+    // stores the change to a different octave.
     int octaveposition;
+    // holds the formula for the frequency
     double freq;
+    // stores the distance from the octave up or down to the actual note (A, B, C, D, E, F or G).
     int offset;
 
     // in case the string only has two chars
@@ -205,6 +216,7 @@ int frequency(string note)
                 break;
         }
 
+        // adjusts the frequency to reflect the addition of an accidental ('b' or '#')
         if (note[1] == 'b')
         {
             freq = freq / pow(2.0, 1.0 / 12.0);
@@ -225,6 +237,7 @@ int frequency(string note)
 // Determines whether a string represents a rest
 bool is_rest(string s)
 {
+    // compares the two strings, returning 0 if they are the same.
     if (strcmp(s, "") == 0)
     {
         return true;
